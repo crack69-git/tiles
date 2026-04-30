@@ -7,13 +7,13 @@ const NavbarSection = () => {
   const links = (
     <>
       <li>
-        <NavLink href="/">Home</NavLink>
+        <Link href="/">Home</Link>
       </li>
       <li>
-        <NavLink href="/all">All Tiles</NavLink>
+        <Link href="/all">All Tiles</Link>
       </li>
       <li>
-        <NavLink href="/profile">My Profile</NavLink>
+        <Link href="/profile">My Profile</Link>
       </li>
     </>
   );

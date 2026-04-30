@@ -6,7 +6,7 @@ const fetchData = async () => {
 };
 const ProductSection = async () => {
   const data = await fetchData();
-  console.log(data);
+  // console.log(data);
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Our Products</h2>

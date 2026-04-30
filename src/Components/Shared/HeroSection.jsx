@@ -8,9 +8,10 @@ const HeroSection = () => {
         className="rounded-2xl"
         style={{
           backgroundImage: "url('/hero.jpeg')",
-          //   backgroundSize: "cover",
-          //   backgroundPosition: "end",
-          //   minHeight: "100vh",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          // minHeight: "100vh",
         }}
       >
         <div className="hero min-h-fit">
