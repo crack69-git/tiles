@@ -5,7 +5,7 @@ import Image from "next/image";
 const Card = ({ data }) => {
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm">
+      <div className="card bg-base-100 shadow-sm h-full">
         <figure className="px-10 pt-10">
           <Image src={tilesImg} alt="Shoes" className="rounded-xl" />
         </figure>

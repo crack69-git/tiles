@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Link from "next/link";
 const fetchData = async () => {
   const res = await fetch("http://localhost:3000/tilesData.json");
   return res.json();
@@ -9,7 +10,15 @@ const ProductSection = async () => {
   // console.log(data);
   return (
     <div>
-      <h2 className="text-2xl font-bold mb-4">Our Products</h2>
+      <div className="flex items-center justify-between my-5">
+        <h2 className="text-2xl font-bold mb-4">Our Products</h2>
+        <Link
+          href="/all"
+          className="underline hover:text-blue-700 font-semibold"
+        >
+          View All
+        </Link>
+      </div>
       <div className="grid grid-cols-4 gap-3">
         {data.slice(0, 4).map((item) => (
           <Card key={item.id} data={item} />
