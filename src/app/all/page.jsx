@@ -33,7 +33,7 @@ const page = async () => {
           <input type="search" required placeholder="Search" />
         </label>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 mb-10">
         {/* <p>data.length: {data.length}</p> */}
         {data.map((item, index) => (
           <AllCardSection key={index} item={item} />
