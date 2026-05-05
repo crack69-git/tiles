@@ -4,6 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import NavLink from "./NavLink";
 import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 
 const NavbarSection = () => {
   const router = useRouter();
@@ -60,9 +61,17 @@ const NavbarSection = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          {session ? (
+          {isPending ? (
+            <span className="loading loading-spinner loading-md"></span>
+          ) : session ? (
             <div className="flex items-center gap-3">
-              <p className="font-semibold">Welcome, {session.user.name}</p>
+              <Image
+                src={session.user.image}
+                alt="Profile Picture"
+                width={40}
+                height={40}
+                className="rounded-full"
+              ></Image>
               <button
                 className="btn btn-primary"
                 onClick={async () => {

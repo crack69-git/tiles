@@ -2,38 +2,28 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { useForm } from "react-hook-form";
 
 const SignUpPage = () => {
+  const router = useRouter();
   const { register, handleSubmit } = useForm();
-
-  const toBase64 = (file) =>
-    new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = (error) => reject(error);
-    });
-
   const signUpFunc = async (data) => {
-    const { name, email, picture, password } = data;
-    let image = null;
-    if (picture && picture.length > 0) {
-      try {
-        image = await toBase64(picture[0]);
-      } catch (err) {
-        console.error("Failed to read image file:", err);
-      }
-    }
-
+    const { name, email, photo, password } = data;
     const { data: res, error } = await authClient.signUp.email({
       name: name, // required
       email: email, // required
       password: password, // required
-      image: image, // required (send base64 data URL)
+      image: photo, // required (send base64 data URL)
       callbackURL: "/login",
     });
+    if (error) {
+      alert("Sign up failed: " + error.message);
+    } else {
+      alert("Sign up successful!");
+      router.push("/login");
+    }
   };
   return (
     <div>
@@ -65,11 +55,11 @@ const SignUpPage = () => {
             />
             <label className="label text-lg font-semibold">Picture</label>
             <input
+              type="text"
+              className="input w-full"
+              {...register("photo")}
+              placeholder="Photo URL"
               required
-              type="file"
-              accept="image/*"
-              {...register("picture")}
-              className="file-input w-full"
             />
             <label className="label text-lg font-semibold">Password</label>
             <input

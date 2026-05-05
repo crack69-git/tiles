@@ -1,36 +1,44 @@
-import { Trash2 } from "lucide-react";
+"use client";
+import { authClient } from "@/lib/auth-client";
+import { Squirrel, Trash2 } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 const page = () => {
+  const { data: session } = authClient.useSession();
+  const profileImage = session?.user?.image;
   return (
     <div className="w-6/12 mx-auto mt-10">
-      <div className="flex flex-col gap-2">
-        <div className="card bg-base-100  shadow-sm">
-          <figure className="px-10 pt-10">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-              alt="Shoes"
-              className="rounded-full w-50 h-50"
-            />
-          </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-bold">
-              Ashutosh Tanchangya
-            </h2>
-            <p className="text-[16px] text-gray-500 mb-5">
-              toshashu000089@gmail.com
-            </p>
-            <div className="card-actions">
-              <button className="btn btn-primary">Edit Profile</button>
+      <div className="card bg-base-100  shadow-sm">
+        <figure className="px-10 pt-10">
+          {profileImage ? (
+            <div className="border-2 p-2 rounded-lg">
+              <Image
+                src={profileImage}
+                alt="Profile Picture"
+                width={150}
+                height={150}
+                loading="eager"
+                className=""
+              />
             </div>
-          </div>
-        </div>
-        <div className="card bg-base-100 w-full shadow-sm">
-          <div className="card-body py-3">
-            <p className="flex items-center justify-center gap-3 text-lg font-semibold text-red-500">
-              <Trash2 />
-              Delete Account
-            </p>
+          ) : (
+            <div className=" flex h-37.5 w-37.5 items-center justify-center rounded-full bg-base-200 text-4xl font-bold text-base-content/50">
+              ?
+            </div>
+          )}
+        </figure>
+        <div className="card-body items-center text-center">
+          <h2 className="card-title text-2xl font-bold">
+            Name: {session?.user?.name || "User Name"}
+          </h2>
+          <p className="text-[16px] text-gray-500 mb-5">
+            Email: {session?.user?.email || "user@example.com"}
+          </p>
+          <div className="card-actions">
+            <button className="btn btn-primary">
+              <Squirrel /> Update Profile
+            </button>
           </div>
         </div>
       </div>
