@@ -7,7 +7,6 @@ const fetchData = async () => {
 };
 const ProductSection = async () => {
   const data = await fetchData();
-  // console.log(data);
   return (
     <div>
       <div className="flex items-center justify-between my-5">

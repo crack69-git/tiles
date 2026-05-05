@@ -34,7 +34,6 @@ const SignUpPage = () => {
       image: image, // required (send base64 data URL)
       callbackURL: "/login",
     });
-    console.log(res, error);
   };
   return (
     <div>

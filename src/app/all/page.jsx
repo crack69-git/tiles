@@ -8,7 +8,7 @@ const fetchData = async () => {
 };
 const page = async () => {
   const data = await fetchData();
-  console.log("data", data);
+  // console.log("data", data);
   return (
     <div className="text-center mt-10">
       <h2 className="text-6xl font-bold mb-3">All Tiles</h2>
