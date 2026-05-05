@@ -54,7 +54,9 @@ const NavbarSection = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-primary">Login</a>
+          <Link href="/login">
+            <button className="btn btn-primary">Login</button>
+          </Link>
         </div>
       </div>
     </div>

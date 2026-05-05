@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const AllCardSection = ({ item }) => {
@@ -15,7 +16,9 @@ const AllCardSection = ({ item }) => {
           <h2 className="card-title">{item.title}</h2>
           <p>{item.description}</p>
           <div className="card-actions">
-            <button className="btn btn-primary">View Details</button>
+            <Link href={`/all/${item.id}`}>
+              <button className="btn btn-primary">View Details</button>
+            </Link>
           </div>
         </div>
       </div>

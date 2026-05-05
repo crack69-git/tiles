@@ -4,11 +4,11 @@
     "title": "Marble White Tile",
     "description": "An elegant marble tile with a polished white surface and subtle natural veining, designed to bring a clean, timeless, and luxurious look to interiors.",
     "image": "/images/tiles/tile_002.jpg",
-    "category": "marble",
+    "category": "Marble",
     "price": 72.5,
     "currency": "USD",
     "dimensions": "80x80 cm",
-    "material": "Marble",
+    "material": ["Marble", "Natural Stone", "Polished"],
     "inStock": true
   },
   {
@@ -16,11 +16,11 @@
     "title": "Granite Black Tile",
     "description": "A durable granite tile with a matte black finish and a bold modern appearance, ideal for spaces that need a strong, refined, and low-maintenance surface.",
     "image": "/images/tiles/tile_003.jpg",
-    "category": "granite",
+    "category": "Granite",
     "price": 65,
     "currency": "USD",
     "dimensions": "60x60 cm",
-    "material": "Granite",
+    "material": ["Granite", "Natural Stone", "Matte"],
     "inStock": false
   },
   {
@@ -28,11 +28,11 @@
     "title": "Wood Finish Tile",
     "description": "A natural wood-look tile with a realistic grain pattern and anti-slip surface, offering the warmth of wood with the durability and easy care of porcelain.",
     "image": "/images/tiles/tile_004.jpg",
-    "category": "wood",
+    "category": "Wood",
     "price": 55.75,
     "currency": "USD",
     "dimensions": "120x20 cm",
-    "material": "Porcelain",
+    "material": ["Porcelain", "Wood-look", "Ceramic"],
     "inStock": true
   },
   {
@@ -40,11 +40,11 @@
     "title": "Glossy Red Tile",
     "description": "A high-gloss ceramic tile with a vibrant red tone and reflective finish, perfect for creating a bold accent wall or a lively decorative surface.",
     "image": "/images/tiles/tile_005.jpg",
-    "category": "ceramic",
+    "category": "Ceramic",
     "price": 49.99,
     "currency": "USD",
     "dimensions": "50x50 cm",
-    "material": "Ceramic",
+    "material": ["Ceramic", "Glazed", "High-gloss"],
     "inStock": true
   },
   {
@@ -52,11 +52,11 @@
     "title": "Stone Texture Tile",
     "description": "A rough stone-textured tile made for outdoor use, featuring a natural surface feel and strong resistance to weather conditions and heavy wear.",
     "image": "/images/tiles/tile_006.jpg",
-    "category": "stone",
+    "category": "Stone",
     "price": 60,
     "currency": "USD",
     "dimensions": "60x60 cm",
-    "material": "Natural Stone",
+    "material": ["Natural Stone", "Concrete", "Textured"],
     "inStock": true
   },
   {
@@ -64,11 +64,11 @@
     "title": "Pattern Mosaic Tile",
     "description": "A decorative mosaic tile with intricate patterns and a detailed visual finish, designed to add artistic character and a premium touch to any space.",
     "image": "/images/tiles/tile_007.jpg",
-    "category": "mosaic",
+    "category": "Mosaic",
     "price": 85.25,
     "currency": "USD",
     "dimensions": "30x30 cm",
-    "material": "Glass",
+    "material": ["Glass", "Mosaic", "Decorative"],
     "inStock": false
   },
   {
@@ -76,11 +76,11 @@
     "title": "Matte Grey Tile",
     "description": "A minimalist matte grey tile with a smooth, understated finish that works well in modern interiors, offering a balanced and versatile design choice.",
     "image": "/images/tiles/tile_008.jpg",
-    "category": "ceramic",
+    "category": "Ceramic",
     "price": 42.3,
     "currency": "USD",
     "dimensions": "60x60 cm",
-    "material": "Ceramic",
+    "material": ["Ceramic", "Matte", "Modern"],
     "inStock": true
   },
   {
@@ -88,11 +88,11 @@
     "title": "Porcelain Beige Tile",
     "description": "A smooth porcelain tile in a warm beige shade, ideal for creating soft, inviting interiors with a clean look and long-lasting durability.",
     "image": "/images/tiles/tile_009.jpg",
-    "category": "porcelain",
+    "category": "Porcelain",
     "price": 58.4,
     "currency": "USD",
     "dimensions": "75x75 cm",
-    "material": "Porcelain",
+    "material": ["Porcelain", "Ceramic", "Smooth"],
     "inStock": true
   },
   {
@@ -100,11 +100,11 @@
     "title": "Outdoor Anti-Slip Tile",
     "description": "A weather-resistant tile designed for outdoor flooring, built with an anti-slip surface to improve safety while maintaining strength and reliability in exposed areas.",
     "image": "/images/tiles/tile_010.jpg",
-    "category": "outdoor",
+    "category": "Outdoor",
     "price": 67.9,
     "currency": "USD",
     "dimensions": "60x60 cm",
-    "material": "Concrete",
+    "material": ["Concrete", "Natural Stone", "Weather-resistant"],
     "inStock": true
   },
   {
@@ -112,11 +112,11 @@
     "title": "Luxury Gold Vein Tile",
     "description": "A premium marble-effect tile with striking gold veining and a high-end finish, created to deliver a sophisticated luxury statement in elegant interiors.",
     "image": "/images/tiles/tile_011.jpg",
-    "category": "luxury",
+    "category": "Luxury",
     "price": 120,
     "currency": "USD",
     "dimensions": "100x100 cm",
-    "material": "Marble",
+    "material": ["Marble", "Natural Stone", "Premium"],
     "inStock": false
   }
 ]

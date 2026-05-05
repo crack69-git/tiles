@@ -3,7 +3,7 @@ import React from "react";
 const FooterSection = () => {
   return (
     <div className="pb-5">
-      <footer className="text-neutral-content bg-neutral rounded-3xl">
+      <footer className="text-neutral-content  bg-neutral rounded-3xl">
         <div className="flex justify-evenly text-neutral-content p-10 mt-10">
           <aside>
             <svg

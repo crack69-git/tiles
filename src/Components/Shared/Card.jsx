@@ -2,6 +2,7 @@
 import React from "react";
 import tilesImg from "@/assests/tilesImg.jpeg";
 import Image from "next/image";
+import Link from "next/link";
 const Card = ({ data }) => {
   return (
     <div>
@@ -13,7 +14,9 @@ const Card = ({ data }) => {
           <h2 className="card-title">{data.title}</h2>
           <p>{data.description}</p>
           <div className="card-actions">
-            <button className="btn btn-primary">View Details</button>
+            <Link href={`/all/${data.id}`}>
+              <button className="btn btn-primary">View Details</button>
+            </Link>
           </div>
         </div>
       </div>
