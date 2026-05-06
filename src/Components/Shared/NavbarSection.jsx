@@ -9,18 +9,22 @@ import Image from "next/image";
 const NavbarSection = () => {
   const router = useRouter();
   const { data: session, isPending } = authClient.useSession();
+  const navImage =
+    typeof session?.user?.image === "string"
+      ? session.user.image
+      : session?.user?.image?.url || session?.user?.image?.src || null;
   // console.log("Session data:", session);
   // console.log(isPending);
   const links = (
     <>
       <li>
-        <Link href="/">Home</Link>
+        <NavLink href="/">Home</NavLink>
       </li>
       <li>
-        <Link href="/all">All Tiles</Link>
+        <NavLink href="/all">All Tiles</NavLink>
       </li>
       <li>
-        <Link href="/profile">My Profile</Link>
+        <NavLink href="/profile">My Profile</NavLink>
       </li>
     </>
   );
@@ -65,13 +69,19 @@ const NavbarSection = () => {
             <span className="loading loading-spinner loading-md"></span>
           ) : session ? (
             <div className="flex items-center gap-3">
-              <Image
-                src={session.user.image}
-                alt="Profile Picture"
-                width={40}
-                height={40}
-                className="rounded-full"
-              ></Image>
+              {navImage ? (
+                <Image
+                  src={navImage}
+                  alt="Profile Picture"
+                  width={40}
+                  height={40}
+                  className="rounded-full"
+                />
+              ) : (
+                <div className="h-10 w-10 rounded-full bg-base-200 flex items-center justify-center text-sm">
+                  U
+                </div>
+              )}
               <button
                 className="btn btn-primary"
                 onClick={async () => {

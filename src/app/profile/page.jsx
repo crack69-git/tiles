@@ -2,11 +2,15 @@
 import { authClient } from "@/lib/auth-client";
 import { Squirrel, Trash2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
   const { data: session } = authClient.useSession();
-  const profileImage = session?.user?.image;
+  const profileImage =
+    typeof session?.user?.image === "string"
+      ? session.user.image
+      : session?.user?.image?.url || session?.user?.image?.src || null;
   return (
     <div className="w-6/12 mx-auto mt-10">
       <div className="card bg-base-100  shadow-sm">
@@ -16,8 +20,8 @@ const page = () => {
               <Image
                 src={profileImage}
                 alt="Profile Picture"
-                width={150}
-                height={150}
+                width={100}
+                height={100}
                 loading="eager"
                 className=""
               />
@@ -35,11 +39,13 @@ const page = () => {
           <p className="text-[16px] text-gray-500 mb-5">
             Email: {session?.user?.email || "user@example.com"}
           </p>
-          <div className="card-actions">
-            <button className="btn btn-primary">
-              <Squirrel /> Update Profile
-            </button>
-          </div>
+          <Link href="/profile/update-profile">
+            <div className="card-actions">
+              <button className="btn btn-primary">
+                <Squirrel /> Update Profile
+              </button>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
