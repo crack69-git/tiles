@@ -26,7 +26,7 @@ const UpdateProfile = () => {
       console.error("Update failed:", error.message || error);
       return;
     }
-
+    alert("Profile updated successfully");
     router.push("/profile");
     router.refresh();
   };
