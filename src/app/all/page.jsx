@@ -1,5 +1,5 @@
 import AllTilesClient from "@/Components/Shared/AllTilesClient";
-import tilesData from "@/public/tilesData.json";
+import tilesData from "../../../public/tilesData.json";
 import React from "react";
 
 export const metadata = {
