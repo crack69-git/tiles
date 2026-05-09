@@ -47,7 +47,9 @@ const UpdateProfile = () => {
           placeholder="Your Name"
         />
 
-        <label className="label text-[16px] font-semibold">Photo Link</label>
+        <label className="label text-[16px] font-semibold">
+          Photo Link(Use imagedb to extract image link)
+        </label>
         <input
           type="text"
           {...register("photo")}

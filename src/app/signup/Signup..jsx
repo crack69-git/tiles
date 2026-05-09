@@ -53,7 +53,9 @@ const Signup = () => {
               placeholder="Email"
               required
             />
-            <label className="label text-lg font-semibold">Picture</label>
+            <label className="label text-lg font-semibold">
+              Picture (Use imagedb to extract image link)
+            </label>
             <input
               type="text"
               className="input w-full"
