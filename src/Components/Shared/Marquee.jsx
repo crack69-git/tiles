@@ -1,12 +1,9 @@
 import React from "react";
 import FastMarquee from "react-fast-marquee";
-const fetchData = async () => {
-  const res = await fetch("/tilesData.json");
-  return res.json();
-};
+import tilesData from "../../../public/tilesData.json";
 
 const MarqueePage = async () => {
-  const data = await fetchData();
+  const data = tilesData;
   return (
     <div className="bg-blue-50 py-3 px-3 rounded-2xl my-5">
       <div className="flex items-center gap-3">

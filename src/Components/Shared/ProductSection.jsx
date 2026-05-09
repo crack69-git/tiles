@@ -1,12 +1,10 @@
 import React from "react";
 import Card from "./Card";
 import Link from "next/link";
-const fetchData = async () => {
-  const res = await fetch("/tilesData.json");
-  return res.json();
-};
+import tilesData from "../../../public/tilesData.json";
+
 const ProductSection = async () => {
-  const data = await fetchData();
+  const data = tilesData;
   return (
     <div>
       <div className="flex items-center justify-between my-5">
