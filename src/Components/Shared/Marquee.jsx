@@ -1,7 +1,7 @@
 import React from "react";
 import FastMarquee from "react-fast-marquee";
 const fetchData = async () => {
-  const res = await fetch("http://localhost:3000/tilesData.json");
+  const res = await fetch("/tilesData.json");
   return res.json();
 };
 
