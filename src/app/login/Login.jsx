@@ -15,6 +15,15 @@ const Login = () => {
       rememberMe: true,
       callbackURL: "/",
     });
+
+    if (error) {
+      alert(error.message || "Wrong password");
+      return;
+    }
+
+    if (res) {
+      alert("Login successful");
+    }
   };
 
   const signIn = async () => {
@@ -23,8 +32,14 @@ const Login = () => {
       callbackURL: "/",
     });
 
-    console.log(data);
-    console.log(error);
+    if (error) {
+      alert(error.message || "Social login failed");
+      return;
+    }
+
+    if (data) {
+      alert("Login successful");
+    }
   };
   return (
     <div>
