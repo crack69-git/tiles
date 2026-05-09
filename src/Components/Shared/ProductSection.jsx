@@ -3,7 +3,7 @@ import Card from "./Card";
 import Link from "next/link";
 import tilesData from "../../../public/tilesData.json";
 
-const ProductSection = async () => {
+const ProductSection = () => {
   const data = tilesData;
   return (
     <div>

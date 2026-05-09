@@ -2,7 +2,7 @@ import React from "react";
 import FastMarquee from "react-fast-marquee";
 import tilesData from "../../../public/tilesData.json";
 
-const MarqueePage = async () => {
+const MarqueePage = () => {
   const data = tilesData;
   return (
     <div className="bg-blue-50 py-3 px-3 rounded-2xl my-5">
