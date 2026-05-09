@@ -28,6 +28,7 @@ const Login = () => {
   };
 
   const signIn = async () => {
+    console.log("Initiating social login...");
     const { data, error } = await authClient.signIn.social({
       provider: "google",
       callbackURL: "/",

@@ -44,7 +44,7 @@ const UpdateProfile = () => {
         <input
           type="text"
           {...register("name")}
-          className="input w-full"
+          className="input w-fit"
           placeholder="Your Name"
         />
 
@@ -54,13 +54,13 @@ const UpdateProfile = () => {
         <input
           type="text"
           {...register("photo")}
-          className="input w-full"
+          className="input w-fit"
           placeholder="https://example.com/photo.jpg"
         />
 
         <button
           type="submit"
-          className="btn btn-primary mt-6 w-full"
+          className="btn btn-primary mt-6 w-fit"
           disabled={formState.isSubmitting}
         >
           {formState.isSubmitting ? "Updating..." : "Update"}
