@@ -35,7 +35,7 @@ const UpdateProfile = () => {
   return (
     <form
       onSubmit={handleSubmit(updateHandle)}
-      className="mt-10 w-4/12 mx-auto bg-base-200 border-base-300 border rounded-box"
+      className="mt-10 max-sm:w-full w-4/12 mx-auto bg-base-200  border rounded-box"
     >
       <fieldset className="fieldset py-10 px-8">
         <p className="text-2xl font-bold text-center">Update Profile</p>
@@ -49,7 +49,7 @@ const UpdateProfile = () => {
         />
 
         <label className="label text-[16px] font-semibold">
-          Photo Link(Use imagedb to extract image link)
+          Photo Link<br></br>(Use imagedb to extract image link)
         </label>
         <input
           type="text"
