@@ -1,16 +1,15 @@
-import AllCardSection from "@/Components/Shared/AllCardSection";
 import AllTilesClient from "@/Components/Shared/AllTilesClient";
-import Card from "@/Components/Shared/Card";
 import React from "react";
-import { useForm } from "react-hook-form";
+export const metadata = {
+  title: "All Tiles",
+  description: "",
+};
 const fetchData = async () => {
   const res = await fetch("http://localhost:3000/tilesData.json");
   return res.json();
 };
 const page = async () => {
   const data = await fetchData();
-  // console.log("data", data);
-
   return <AllTilesClient data={data} />;
 };
 
