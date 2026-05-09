@@ -4,6 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -17,12 +18,12 @@ const Login = () => {
     });
 
     if (error) {
-      alert(error.message || "Wrong password");
+      toast.error(error.message || "Wrong password");
       return;
     }
 
     if (res) {
-      alert("Login successful");
+      toast.success("Login successful");
     }
   };
 
@@ -33,12 +34,12 @@ const Login = () => {
     });
 
     if (error) {
-      alert(error.message || "Social login failed");
+      toast.error(error.message || "Social login failed");
       return;
     }
 
     if (data) {
-      alert("Login successful");
+      toast.success("Login successful");
     }
   };
   return (

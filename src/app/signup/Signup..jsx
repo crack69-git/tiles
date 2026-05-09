@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const router = useRouter();
@@ -19,9 +20,9 @@ const Signup = () => {
       callbackURL: "/login",
     });
     if (error) {
-      alert("Sign up failed: " + error.message);
+      toast.error("Sign up failed: " + error.message);
     } else {
-      alert("Sign up successful!");
+      toast.success("Sign up successful!");
       router.push("/login");
     }
   };

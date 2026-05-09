@@ -5,6 +5,8 @@ import HeroSection from "@/Components/Shared/HeroSection";
 import FooterSection from "@/Components/Shared/FooterSection";
 import MarqueePage from "@/Components/Shared/Marquee";
 import ProductSection from "@/Components/Shared/ProductSection";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +32,18 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="bg-gray-100">
+        <ToastContainer
+          position="bottom-right"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={true}
+          closeOnClick
+          rtl={false}
+          // pauseOnFocusLoss
+          // draggable
+          pauseOnHover
+          theme="light"
+        />
         <div className="w-11/12 mx-auto pt-5 flex flex-col min-h-screen">
           <NavbarSection />
           <main className="flex-1">{children}</main>
