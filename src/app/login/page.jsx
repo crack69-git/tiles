@@ -27,7 +27,7 @@ const LoginPage = () => {
     console.log(error);
   };
   return (
-    <div>npm run de
+    <div>
       <form
         onSubmit={handleSubmit(loginFunc)}
         className="flex items-center justify-center mt-10"
