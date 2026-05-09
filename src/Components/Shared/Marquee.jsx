@@ -15,7 +15,8 @@ const MarqueePage = async () => {
           {data.map((item) => (
             <div key={item._id}>
               <p className="mx-5">
-                {item.title}: {item.description}
+                <span className="font-semibold">{item.title}: </span>{" "}
+                {item.description}
               </p>
             </div>
           ))}

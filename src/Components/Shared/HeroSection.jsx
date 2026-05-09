@@ -1,3 +1,4 @@
+import "animate.css";
 import Image from "next/image";
 import React from "react";
 import tiles from "@/assests/tiles.png";
@@ -35,7 +36,7 @@ const HeroSection = () => {
                 />
                 Curation Excellence
               </div>
-              <h1 className="text-6xl font-bold">
+              <h1 className="text-6xl font-bold animate__animated animate__flipInX animate">
                 "Discover Your Perfect Aesthetic"
               </h1>
               <p className="py-6 text-xl text-gray-500">
