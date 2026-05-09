@@ -20,14 +20,14 @@ const page = () => {
               <Image
                 src={profileImage}
                 alt="Profile Picture"
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 loading="eager"
                 className=""
               />
             </div>
           ) : (
-            <div className=" flex h-37.5 w-37.5 items-center justify-center rounded-full bg-base-200 text-4xl font-bold text-base-content/50">
+            <div className="flex h-[150px] w-[150px] items-center justify-center rounded-full bg-base-200 text-4xl font-bold text-base-content/50">
               ?
             </div>
           )}

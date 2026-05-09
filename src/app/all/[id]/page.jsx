@@ -32,8 +32,8 @@ const CardDetails = () => {
   );
   return (
     <div className="mt-10">
-      <div className="card card-side bg-base-100 shadow-sm w-3/4 mx-auto">
-        <figure className="relative">
+      <div className="grid grid-cols-1 sm:grid-cols-3 card-side bg-base-100 shadow-sm w-3/4 mx-auto">
+        <figure className="relative col-span-1">
           <div className="absolute top-4 left-4">
             {inStock ? (
               <div className="badge badge-success p-3 text-lg">In Stock</div>
@@ -41,13 +41,15 @@ const CardDetails = () => {
               <div className="badge badge-error p-3 text-lg">Out of Stock</div>
             )}
           </div>
-          <img
+          <Image
             src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
             alt="Movie"
-            className="w-100 rounded-3xl"
+            width={400}
+            height={300}
+            className="rounded-3xl w-full h-full object-cover"
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body col-span-2">
           <h2 className="card-title text-5xl mb-5 font-bold">{title}</h2>
           <div className="flex flex-wrap gap-3">
             {selectedTile.material.map((mat, index) => (

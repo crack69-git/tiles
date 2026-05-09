@@ -10,16 +10,17 @@ const HeroSection = () => {
   return (
     <div className="mt-5 rounded-2xl">
       <div
-        className="rounded-2xl"
-        style={{
-          backgroundImage: "url('/hero.jpeg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+        className="rounded-2xl "
 
-          // color: "transparent",
-          // minHeight: "100vh",
-        }}
+        // style={{
+        //   backgroundImage: "url('/hero.jpeg')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundRepeat: "no-repeat",
+
+        //   // color: "transparent",
+        //   // minHeight: "100vh",
+        // }}
       >
         <div className="hero min-h-fit">
           <div className="hero-content justify-between">
@@ -38,9 +39,10 @@ const HeroSection = () => {
                 "Discover Your Perfect Aesthetic"
               </h1>
               <p className="py-6 text-xl text-gray-500">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
+                Premium, durable, and stylish tiles for every space. Crafted
+                with precision from eco-friendly materials, available in a wide
+                range of finishes and sizes to suit any modern or classic
+                interior.
               </p>
               <Link href="/all" className="btn btn-primary">
                 Browse Now
@@ -62,7 +64,7 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="max-sm:hidden">
               <Image src={tiles} alt="tiles" width={980} height={980} />
             </div>
           </div>
