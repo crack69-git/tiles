@@ -1,12 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      "www.bing.com",
-      "bing.com",
-      "i.pinimg.com",
-      "lh3.googleusercontent.com",
-    ],
     remotePatterns: [
       {
         protocol: "https",
@@ -15,27 +9,7 @@ const nextConfig = {
         pathname: "/**",
         search: "",
       },
-      {
-        protocol: "https",
-        hostname: "imgcdn.stablediffusionweb.com",
-        port: "",
-        pathname: "/**",
-        search: "",
-      },
-      {
-        protocol: "https",
-        hostname: "www.bing.com",
-        port: "",
-        pathname: "/**",
-        search: "",
-      },
-      {
-        protocol: "https",
-        hostname: "img.daisyui.com",
-        port: "",
-        pathname: "/**",
-        search: "",
-      },
+
       {
         protocol: "https",
         hostname: "i.ibb.co",
